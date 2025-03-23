@@ -27,14 +27,23 @@ This project works with the following datasets:
 ## Project Structure
 
 fake-news-detector/
+
 ├── data_loaders/           # Dataset loading scripts
+│   │
 │   ├── liar_load.py
+│   │
 │   ├── fakenewsnet_load.py
+│   │
 │   ├── fakeandreal_load.py
+│   │
 │   └── fakenewspred_load.py
+│
 ├── *_dataset/              # Dataset directories (not included in repo)
+│
 ├── .gitignore             # Git ignore file
+│
 ├── requirements.txt       # Project dependencies
+│
 └── README.md              # This file
 
 ## Why Datasets are Not Included

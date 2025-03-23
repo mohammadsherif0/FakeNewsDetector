@@ -24,6 +24,32 @@ This project works with the following datasets:
    - Additional dataset for fake news classification
    - [Available on Kaggle](https://www.kaggle.com/datasets/rajatkumar30/fake-news)
 
+## Preprocessing Pipeline
+
+The project includes a comprehensive preprocessing pipeline that standardizes all datasets for model training:
+
+1. **Text Cleaning**
+   - Removes HTML tags, URLs, and special characters
+   - Normalizes whitespace and text formatting
+   - Preserves essential text content
+
+2. **Tokenization**
+   - Uses Hugging Face tokenizers compatible with transformer models
+   - Handles text truncation and padding
+   - Maintains consistent sequence lengths
+
+3. **Label Encoding**
+   - Standardizes labels across all datasets (0 for fake, 1 for real)
+   - Handles multi-class labels where applicable
+   - Preserves original label information in metadata
+
+4. **Data Splitting**
+   - Splits data into training, validation, and test sets
+   - Maintains class balance across splits
+   - Preserves dataset-specific splits where available
+
+The preprocessing pipeline is implemented in the `preprocessing` directory and can be tested using the provided test scripts for each dataset.
+
 ## Why Datasets are Not Included
 
 The datasets are not included in this repository for several reasons:

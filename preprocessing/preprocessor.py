@@ -58,11 +58,13 @@ class TextPreprocessor:
             if isinstance(label, (int, float, np.integer)):
                 encoded.append(int(label))
             elif isinstance(label, str):
-                if label.lower() in ['fake', 'false', 'pants-fire', 'barely-true']:
+                label = label.strip().lower()
+                if label in ['fake', 'false', 'pants-fire', 'barely-true']:
                     encoded.append(0)
-                elif label.lower() in ['real', 'true', 'mostly-true']:
+                elif label in ['real', 'true', 'mostly-true']:
                     encoded.append(1)
                 else:
+                    print(f"Warning: Unknown label '{label}', defaulting to 0 (fake)")
                     self.stats['dropped_samples'] += 1
                     encoded.append(0)
             

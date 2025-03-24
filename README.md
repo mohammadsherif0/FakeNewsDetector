@@ -2,6 +2,16 @@
 
 This repository contains code for loading and processing various fake news detection datasets. The project is designed to work with multiple well-known fake news datasets while keeping the data loading process streamlined and reproducible.
 
+## Project Structure
+
+```
+fake-news-detector/
+├── data_loaders/          # Dataset loading utilities
+├── model/                 # Model implementation and training
+├── preprocessing/         # Text preprocessing pipeline
+└── tests/                # Test scripts for each component
+```
+
 ## Datasets
 
 This project works with the following datasets:
@@ -48,7 +58,39 @@ The project includes a comprehensive preprocessing pipeline that standardizes al
    - Maintains class balance across splits
    - Preserves dataset-specific splits where available
 
-The preprocessing pipeline is implemented in the `preprocessing` directory and can be tested using the provided test scripts for each dataset.
+## Recent Improvements
+
+1. **Dataset Management**
+   - Implemented unified dataset class for all sources
+   - Added support for test mode with smaller subsets
+   - Improved error handling and validation
+   - Added progress tracking for data loading
+
+2. **Preprocessing Enhancements**
+   - Standardized text cleaning across datasets
+   - Improved label encoding with better error handling
+   - Added data validation checks
+   - Implemented efficient batch processing
+
+3. **Testing Infrastructure**
+   - Added comprehensive test suite
+   - Implemented dataset-specific test scripts
+   - Added validation for data consistency
+   - Improved error reporting
+
+## Upcoming Features
+
+1. **Model Implementation**
+   - BERT-based classifier for fake news detection
+   - Integration with Hugging Face Trainer API
+   - Support for fine-tuning and transfer learning
+   - Model evaluation and metrics
+
+2. **Training Pipeline**
+   - Configurable training parameters
+   - Model checkpointing and early stopping
+   - Performance monitoring and logging
+   - Cross-dataset evaluation
 
 ## Why Datasets are Not Included
 

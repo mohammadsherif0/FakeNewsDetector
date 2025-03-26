@@ -59,7 +59,7 @@ class TextPreprocessor:
                 encoded.append(int(label))
             elif isinstance(label, str):
                 label = label.strip().lower()
-                if label in ['fake', 'false', 'pants-fire', 'barely-true']:
+                if label in ['fake', 'false', 'pants-fire', 'barely-true', 'half-true']:
                     encoded.append(0)
                 elif label in ['real', 'true', 'mostly-true']:
                     encoded.append(1)
